@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <style>
+            body{
+                background-image: url('{{ url_for('static', filename='REBackground.jpg') }}');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            h1 {
+                text-align: center; 
+                color: whitesmoke;
+                font-size: 70;
+            }
+        </style>
+        <h1>
+            Resume: Glen Harris
+        </h1>
+        <object 
+            data="{{ url_for('static', filename='ProjectResume.pdf') }}" type="application/pdf" width="75%" height="700px">
+        </object>
+        <a href="{{ url_for('home')}}"><button>Home Value</button></a>
+        <a href="{{ url_for('about')}}"><button>About</button></a>
+    </body>
+</html>
