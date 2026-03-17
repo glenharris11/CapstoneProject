@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <style>
+            body{
+                background-image: url('{{ url_for('static', filename='REBackground.jpg') }}');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            h1 {
+                text-align: center;
+                color: whitesmoke;
+                font-size: 70; 
+            }
+            p {
+                font-family: "Times New Roman", Times, serif;
+                color: whitesmoke;
+                font-size: 25;
+                text-align: left;
+                max-width: 1000px;
+                margin: auto;
+            }
+        </style>
+        <h1>
+            About: Glen Harris
+        </h1>
+        <p>
+            Glen Harris grew up in a small Arizona town with a love for soccer and an aversion to homework. 
+            As he got older, he pursued his passion all the way to competing at the college level. However, 
+            with each passing year, his excitement for learning also grew and grew. Glen’s curiosity and 
+            hunger for knowledge led him to graduate from the University of Arizona with a degree in 
+            psychology. To start building a career, Glen turned to real estate and established himself as a 
+            top realtor in the Phoenix-metro area. Glen started working for State Farm in 2022 as a commercial 
+            insurance adjuster and decided to utilize their tuition benefits to advance his education. That 
+            love of learning had never ceded, and soon he found himself ready for a new challenge. In 2023, 
+            with the support of his amazing wife, Glen enrolled in Eastern University’s Master of Data Science 
+            program. He has been completing his degree during the week nights after work and on the weekends. 
+            Armed with his Masters, Glen is anxious to begin this new chapter of life. 
+        </p>
+        <a href="{{ url_for('home')}}"><button>Home Value</button></a>
+        <a href="{{ url_for('resume')}}"><button>Resume</button></a>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <style>
+            body{
+                background-image: url('{{ url_for('static', filename='REBackground.jpg') }}');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+            }
+            h1{
+                color: whitesmoke;
+                font-size: 70;
+            }
+            form{
+                color:whitesmoke;
+                font-size: 30;
+            }
+        </style>
+        <h1>Ames, Iowa: What is your home value?</h1>
+        <form action="/price" method="POST">
+            Living Squarefootage:<input type="text" name="GrLivArea"><br>
+            Lot Squarefootage:<input type="text" name="LotArea"><br>
+            Home Quality (Scale: 1-10):<input type="text" name="OverallQual"><br>
+            Mortgage Amount Owed:<input type="text" name="MortgageOwed"><br>
+            Current Home Value: ${{result}} <br>
+            Cash After Sale (after mortgage & fees): ${{result2}} <br>
+            <input type="submit" value="Get Home Value!">
+        </form>
+        <a href="{{ url_for('resume')}}"><button>Resume</button></a>
+        <a href="{{ url_for('about')}}"><button>About</button></a>
+    </body>
+</html> 
